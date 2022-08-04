@@ -1,0 +1,24 @@
+{
+  "name": "resume-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "16.14.2",
+    "npm" : "6.14.17"
+  },
+  "scripts": {
+    "client-install": "npm install --prefix resume",
+    "server": "nodemon server.js",
+    "resume" : "npm start --prefix resume",
+    "dev" :"concurrently \"npm run server\"\"npm run resume\"",
+    "start": "node server.js",
+    "heroky-postbuild": "NPM_CONFIG-PRODUCTION=false npm install --prefix resume && npm run build --prefix resume"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "mongoose": "^6.5.0"
+  }
+}
